@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* declarations */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "outfit", sans-serif !important;
+}
+
+:root {
+  --red-color: #ED1C24;
+  --black-color: #000;
+  --yellow-color: #F1D302;
+  --blue-color: #235789;
+  --gray-color: #808080;
+}
+
+/* Font Sizes */
+/* Major Thrid Scale */
+.xl-display, .xl-display.marquee {
+  font-size: 95.37px !important;
+}
+
+.big-display {
+  font-size: 76.29px !important;
+}
+
+.heading-one, .heading-one.mobile-link {
+  font-size: 61.04px !important;
+}
+
+.heading-two {
+  font-size: 48.83px !important;
+}
+
+.heading-three {
+  font-size: 39.06px !important;
+}
+
+.heading-four {
+  font-size: 31.25px !important;
+}
+
+.heading-five {
+  font-size: 25px !important;
+}
+
+.heading-six {
+  font-size: 20px !important;
+}
+
+.base-text {
+  font-size: 16px !important;
+}
+
+.sm-text {
+  font-size: 12.8px !important;
+}
+
+.xs-text {
+  font-size: 10.24px !important;
+}
+
+.xxs-text {
+  font-size: 8.19px !important;
+}
+
+/* font weights */
+.bold {
+  font-weight: 700 !important;
+}
+
+.semi-bold {
+  font-weight: 600 !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.marquee {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-red {
+  background-color: var(--red-color);
+  color: #ffffff;
+}
+
+.text-gray {
+  color: var(--gray-color) !important;
+}
+
+.bg-red {
+  background-color: var(--red-color) !important;
+}
+
+.bg-yellow {
+  background-color: var(--yellow-color) !important;
+}
+
+.float-circle {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+}
+
+.text-yellow {
+  color: var(--yellow-color) !important;
+}
+
+.text-blue {
+  color: var(--blue-color) !important;
+}
+
+/* socials */
+.social {
+  transition: all ease 0.3s !important;
+}
+
+.social:hover svg circle {
+  fill: #ffffff !important;
+}
+
+.linkedin:hover svg path {
+  fill: #187BB5 !important;
+}
+
+.twitter:hover svg path {
+  fill: #25A9F4 !important;
+}
+
+.behance:hover svg path {
+  fill: #2A5AFC !important;
+}
+
+.dribbble:hover svg path {
+  fill: #ED3772 !important;
+}
+
+.outline-gray {
+  border: 1px solid var(--gray-color) !important;
+}
+
+.animate__delay-005s {
+  animation-delay: 0.5s !important;
+}
+
+.animate__delay-1_5s {
+  animation-delay: 1.5s !important;
+}
+
+.toggler:hover {
+  color: var(--red-color);
+}
+
+.dark-logo svg path {
+  fill: #ffffff !important;
+}
+
+.light-logo svg path {
+  fill: #000000 !important;
+}
+
+.nav-modal#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #000000;
+}
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .float-circle {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+  }
+
+  .xl-display, .heading-one {
+    font-size: 25px !important;
+  }
+
+  .heading-three, .heading-four {
+    font-size: 20px !important;
+  }
+
+  .xl-display.experience {
+    font-size: 39.06px !important;
+  }
+
+  .heading-two.plus {
+    font-size: 35px !important;
+  }
+
+  .social svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .float-circle {
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+  }
+
+  .heading-five.text-gray {
+    font-size: 16px !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

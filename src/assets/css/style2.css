@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* declarations */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "outfit", sans-serif !important;
+}
+
+:root {
+  --red-color: #ED1C24;
+  --black-color: #000;
+  --yellow-color: #F1D302;
+  --blue-color: #235789;
+  --gray-color: #808080;
+}
+
+/* Font Sizes */
+/* Major Thrid Scale */
+.big-display {
+  font-size: 76.29px !important;
+}
+
+.heading-one {
+  font-size: 61.04px !important;
+}
+
+.heading-two {
+  font-size: 48.83px !important;
+}
+
+.heading-three {
+  font-size: 39.06px !important;
+}
+
+.heading-four {
+  font-size: 31.25px !important;
+}
+
+.heading-five {
+  font-size: 25px !important;
+}
+
+.heading-six {
+  font-size: 20px !important;
+}
+
+.base-text {
+  font-size: 16px !important;
+}
+
+.sm-text {
+  font-size: 12.8px !important;
+}
+
+.xs-text {
+  font-size: 10.24px !important;
+}
+
+.xxs-text {
+  font-size: 8.19px !important;
+}
+
+/* font weights */
+.bold {
+  font-weight: 700 !important;
+}
+
+.semi-bold {
+  font-weight: 600 !important;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-red {
+  background-color: var(--red-color);
+  color: #ffffff;
+}
+
+.text-gray {
+  color: var(--gray-color) !important;
+}
+
+.bg-red {
+  background-color: var(--red-color) !important;
+}
+
+/* socials */
+svg:hover circle {
+  fill: #ffffff;
+}
+
+/*# sourceMappingURL=style2.css.map */
