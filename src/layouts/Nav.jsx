@@ -20,9 +20,6 @@ const Nav = () => {
         }
     }
 
-    // toggle mobile nav
-    const navClass = () => navdisplay ? "md:hidden nav-modal animate__animated animate__fadeInDown animate__faster" : "hidden md:hidden nav-modal animate__animated animate__fadeOutUp animate__faster"
-
 
   return (
     <div className='p-4 dark:text-white dark:bg-black'>
@@ -77,7 +74,7 @@ const Nav = () => {
         {/* navigation modal */}
 
                         
-        <div className={navClass()} id='navigation' >
+        <div className={navdisplay ? "md:hidden nav-modal animate__animated animate__fadeInDown animate__faster" : "hidden md:hidden nav-modal animate__animated animate__fadeOutUp animate__faster"} id='navigation' >
             <div className="nav-modal-content">
                 {/* modal header */}
                 <div className="flex justify-between p-8">

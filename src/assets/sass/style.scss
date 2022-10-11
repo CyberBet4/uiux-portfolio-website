@@ -222,6 +222,39 @@ body{
     background-color: #000000;
 }
 
+.spinner{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+button.disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+// toast
+.toast{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
 // media query for mobile
 
 @media only screen and (max-width: 768px) {

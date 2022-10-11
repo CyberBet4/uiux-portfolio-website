@@ -1,9 +1,55 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faArrowTrendUp } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faArrowTrendUp, faSpinner, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import Marquee from "react-fast-marquee";
+import emailjs from '@emailjs/browser';
+
 
 const Home = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
+
+    const form = useRef();
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+
+    //     emailjs.sendForm('service_vtqzlmi', 'template_co9u72s', form.current, 'u0cbkTB5JQL9KJpYx')
+    //     .then((result) => {
+    //         console.log(result.text);
+    //     }, (error) => {
+    //         console.log(error.text);
+    //     });
+    // };
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+
+        try{
+            setLoading(true); //run loader
+            await emailjs.sendForm('service_vtqzlmi', 'template_co9u72s', form.current, 'u0cbkTB5JQL9KJpYx')
+            setSuccess(true);
+            setLoading(false); //stop loader
+            setTimeout(() => setSuccess(false), 3000);
+        }catch(e){
+            setLoading(false)
+            setError(true);
+            setTimeout(() => setError(false), 3000);
+        }
+    };
+
+
+    // const runLoader = (e) => {
+    //     e.preventDefault();
+    //     setLoading(true);
+    //     setTimeout(() => {
+    //         setLoading(false);
+    //     }, 3000);
+    // }
+
+
   return (
     <div className=' dark:text-white dark:bg-black overflow-hidden'>
         <div className="p-4 grid grid-flow-col ">
@@ -113,7 +159,7 @@ const Home = () => {
 
             <div className='md:mt-10'>
                 <h5 data-aos="fade-up" data-aos-duration="1000" className="heading-five">
-                    I also possess 3+ years of proficiency in writing front-end codes (React & Javascript) for web-based applications. This in turn gives me an added advantage of understanding the perspective of both users and developers.
+                    I also possess 3+ years of proficiency in writing front-end codes (React & Javascript) for web-based applications. This in turn gives me the added advantage of understanding the perspective of both users and developers.
                 </h5>
             </div>
         </div>
@@ -160,26 +206,55 @@ const Home = () => {
         </h1>
 
         <div data-aos="fade-in" data-aos-duration="500" className="form flex justify-center mt-10">
-            <form  action="" method="post" className='w-full md:w-2/5 '>
+        {/* onSubmit={sendEmail} */}
+            <form ref={form} onSubmit={sendEmail}  method="post" className='w-full md:w-2/5 '>
                 <div className="grid grid-rows-2 gap-y-0 mb-4">
+
+                    {/* toast */}
+                    <div className={success ? 'toast bg-green-200' : 'hidden'}>
+                        <div className="flex items-center space-x-4">
+                            {/* <FontAwesomeIcon icon={faCircleNotch} className='animate-spin' /> */}
+                            <span className="text-green-700 base-text">Your message has been sent</span>
+                        </div>
+                    </div>
+
+                    <div className={error ? 'toast bg-red-200' : 'hidden'}>
+                        <div className="flex items-center space-x-4">
+                            {/* <FontAwesomeIcon icon={faCircleNotch} className='animate-spin' /> */}
+                            <span className="text-red-700 base-text">An error occurred</span>
+                        </div>
+                    </div>
+
                     <label className='heading-five'>Name</label>
-                    <input type="text" placeholder='Your name' className='dark:bg-black outline-3 pl-4 pr-4 h-12 outline-gray' />
+                    <input type="text" placeholder='Your name' name='name' className='dark:bg-black outline-3 pl-4 pr-4 h-12 outline-gray' required />
                 </div>
 
                 <div className="grid grid-rows-2 gap-y-0 mt-5">
                     <label className='heading-five'>Email</label>
-                    <input type="email" placeholder='Your email address' className='dark:bg-black outline-3 pl-4 pr-4 h-12 outline-gray' />
+                    <input type="email" placeholder='Your email address' name='email' className='dark:bg-black outline-3 pl-4 pr-4 h-12 outline-gray' required />
                 </div>
 
                 <div className=" mt-5">
                     <h5 className='heading-five'>Message</h5>
-                    <textarea name="" id="" cols="30" rows="10" className='dark:bg-black outline-3 w-full pl-4 pr-4 h-40 outline-gray'></textarea>
+                    <textarea id="" cols="30" rows="10" name='message' required className='dark:bg-black outline-3 w-full pl-4 pr-4 h-40 outline-gray'></textarea>
                 </div>
 
                 <div className="grid grid-rows-2 gap-y-0 mt-10">
-                    <button type="submit" className='btn btn-red base-text p-3'>
-                        Send Message
+                    {
+                        loading ? 
+                        (
+                            <button type="submit" disabled className={'btn disabled btn-red base-text p-3'}>
+                        Sending... 
+                        <FontAwesomeIcon icon={faCircleNotch} className='ml-3 spinner' style={{fontWeight : 700}} />
                     </button>
+                        ) : 
+                            (
+                                <button type="submit" className={'btn btn-red base-text p-3'}>
+                                Send Message
+                            </button>
+                            )
+                    }
+                    
                 </div>
             </form>
         </div>
