@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 
 const Footer = () => {
-  const [logoColor, setlogoColor] = React.useState(document.documentElement.getAttribute('class'))
+  // const [logoColor, setlogoColor] = React.useState(document.documentElement.getAttribute('class'))
 
   // const theme = () => {
   //   // setlogoColor('dark-logo')

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faArrowTrendUp, faSpinner, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faArrowTrendUp, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import Marquee from "react-fast-marquee";
 import emailjs from '@emailjs/browser';
 
