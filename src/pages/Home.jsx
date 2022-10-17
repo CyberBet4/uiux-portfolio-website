@@ -11,7 +11,6 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
-    const [slicedisplay, setSliceDisplay] = useState(false);
 
     const form = useRef();
 
@@ -190,7 +189,7 @@ const Home = () => {
         
 
         <a href="https://www.behance.net/gallery/153025691/Slice-Case-Study" target="_blank" rel="noreferrer">
-        <div data-aos="zoom-out-up" data-aos-duration="500" onMouseEnter={()=>setSliceDisplay(true)} onMouseLeave={()=>setSliceDisplay(false)} >
+        <div data-aos="zoom-out-up" data-aos-duration="500" >
             <div className="flex justify-between items-center p-20 rounded-3xl work-one">
                 <div>
                     <h1 className="big-display bold">SLICE</h1>
