@@ -93,6 +93,31 @@ body {
   border-bottom: 1px solid #333;
 }
 
+.work-one {
+  background-image: url("../../assets/img/spline.png");
+  background-size: 70%;
+  background-position: right;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  background-color: #8DB600;
+  transition: all 400ms ease-in-out !important;
+  opacity: 0.5;
+}
+.work-one .slice-link {
+  opacity: 0;
+  transition: all 400ms ease-in-out !important;
+}
+
+.work-one:hover {
+  background-size: 60%;
+  scale: 1.01;
+  opacity: 1;
+  filter: grayscale(0);
+}
+.work-one:hover .slice-link {
+  opacity: 1;
+}
+
 /* buttons */
 .btn {
   padding: 10px 32px;
@@ -130,6 +155,10 @@ body {
 
 .text-blue {
   color: var(--blue-color) !important;
+}
+
+.nav-links a:hover {
+  color: var(--yellow-color);
 }
 
 /* socials */

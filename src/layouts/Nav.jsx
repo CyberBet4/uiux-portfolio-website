@@ -35,7 +35,7 @@ const Nav = () => {
 
             {/* nav links */}
             <div className="hidden md:flex nav-links space-x-8">
-                <a href="http://">Socials</a>
+                {/* <a href="#">Socials</a> */}
                 <a href="#projects">My Works</a>
                 <a href="#skills">Skills</a>
             </div>
@@ -48,7 +48,7 @@ const Nav = () => {
                         <FontAwesomeIcon icon={faMoon} />
                     </button> */}
 
-                    <button onClick={toggleTheme} className='px-3 toggler'>
+                    {/* <button onClick={toggleTheme} className='px-3 toggler'>
                         <span className='mr-3'>{theme}</span>
                         {
                             theme === 'Dark'?
@@ -56,7 +56,7 @@ const Nav = () => {
                             :   <FontAwesomeIcon icon={faSun} />
                         }
                         
-                    </button>
+                    </button> */}
                 <a href="#message" className="btn btn-red base-text">Let's Chat</a>
                 </div>
 
@@ -93,7 +93,7 @@ const Nav = () => {
                 <div className="modal-body p-8">
                     <div className='text-center '>
                         <h6 className="heading-six bold text-blue">MENU</h6>
-                        <a onClick={()=>setNavdisplay(false)} href="#socials"><h1 className="heading-one mobile-link">Socials</h1></a>
+                        {/* <a onClick={()=>setNavdisplay(false)} href="#socials"><h1 className="heading-one mobile-link">Socials</h1></a> */}
                         <a onClick={()=>setNavdisplay(false)} href="#projects"><h1 className="heading-one mobile-link">My Works</h1></a>
                         <a onClick={()=>setNavdisplay(false)} href="#skills"><h1 className="heading-one mobile-link">Skills</h1></a>
                     </div>

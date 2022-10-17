@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle, faArrowTrendUp, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faArrowTrendUp, faCircleNotch, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Marquee from "react-fast-marquee";
 import emailjs from '@emailjs/browser';
 import triumph from '../assets/img/chibuzo_pic.jpeg'
@@ -11,19 +11,9 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const [slicedisplay, setSliceDisplay] = useState(false);
 
     const form = useRef();
-
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-
-    //     emailjs.sendForm('service_vtqzlmi', 'template_co9u72s', form.current, 'u0cbkTB5JQL9KJpYx')
-    //     .then((result) => {
-    //         console.log(result.text);
-    //     }, (error) => {
-    //         console.log(error.text);
-    //     });
-    // };
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -195,6 +185,36 @@ const Home = () => {
         <h1 data-aos="fade-up" data-aos-duration="500" className="xl-display bold text-uppercase" >
             Selected <br /> works
         </h1>
+
+        {/* work 1 */}
+        
+
+        <a href="https://www.behance.net/gallery/153025691/Slice-Case-Study" target="_blank" rel="noreferrer">
+        <div data-aos="zoom-out-up" data-aos-duration="500" onMouseEnter={()=>setSliceDisplay(true)} onMouseLeave={()=>setSliceDisplay(false)} >
+            <div className="flex justify-between items-center p-20 rounded-3xl work-one">
+                <div>
+                    <h1 className="big-display bold">SLICE</h1>
+                    
+                    
+                        <h5 className="heading-five text-white">
+                        An app that helps users make better financial decisions
+                        </h5>
+                    
+                </div>
+                
+                <div className='space-y-4'>
+
+                <h3 className="heading-three bold uppercase">September 2022</h3>
+                    <h5 className="heading-five slice-link text-right text-black">
+                        View Project
+                        <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
+                    </h5>
+                </div>
+                
+
+            </div>
+        </div>
+        </a>
     </div>
 
     {/* Send a Message */}
