@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faArrowTrendUp, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 import Marquee from "react-fast-marquee";
 import emailjs from '@emailjs/browser';
+import triumph from '../assets/img/chibuzo_pic.jpeg'
 
 
 const Home = () => {
@@ -126,7 +127,7 @@ const Home = () => {
             {/* image goes here */}
             <div className='hidden md:flex' style={{ width : 281, backgroundColor : '#D9D9D9'}}>
                 <div className='animate__animated animate__fadeIn'>
-                    My Image goes here
+                    <img src={triumph} alt="" />
                 </div>
 
             </div>
@@ -173,11 +174,11 @@ const Home = () => {
         <Marquee speed={100} gradientColor={[0,0,0]}>
             <div className="flex items-center space-x-4 mr-7">
                 <FontAwesomeIcon icon={faCircle} style={{color : '#333'}} />
-                <h1 className="xl-display marquee text-uppercase bold text-gray opacity-40">
+                <h1 className="xl-display mar text-uppercase bold text-gray opacity-40">
                     UI/UX Design
                 </h1>
                 <FontAwesomeIcon icon={faCircle} style={{color : '#333'}} />
-                <h1 className="xl-display marquee text-uppercase bold text-gray opacity-40">
+                <h1 className="xl-display mar text-uppercase bold text-gray opacity-40">
                     Frontend Development
                 </h1>
             </div>    
