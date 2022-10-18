@@ -181,7 +181,7 @@ const Home = () => {
         <h3 data-aos="fade-up" data-aos-duration="500" className="heading-three text-blue">
             Projects
         </h3>
-        <h1 data-aos="fade-up" data-aos-duration="500" className="xl-display bold text-uppercase" >
+        <h1 data-aos="fade-up" data-aos-duration="500" className="xl-display bold text-uppercase mb-10 md:mb-0" >
             Selected <br /> works
         </h1>
 
@@ -190,10 +190,9 @@ const Home = () => {
 
         <a href="https://www.behance.net/gallery/153025691/Slice-Case-Study" target="_blank" rel="noreferrer">
         <div data-aos="zoom-out-up" data-aos-duration="500" >
-            <div className="flex justify-between items-center p-20 rounded-3xl work-one">
-                <div>
+            <div className="flex flex-wrap justify-between items-center p-10 md:p-20 rounded-3xl work-one">
+                <div className='mb-10 md:mb-0'>
                     <h1 className="big-display bold">SLICE</h1>
-                    
                     
                         <h5 className="heading-five text-white">
                         An app that helps users make better financial decisions
@@ -204,7 +203,7 @@ const Home = () => {
                 <div className='space-y-4'>
 
                 <h3 className="heading-three bold uppercase">September 2022</h3>
-                    <h5 className="heading-five slice-link text-right text-black">
+                    <h5 className="heading-five slice-link md:text-right text-black">
                         View Project
                         <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
                     </h5>

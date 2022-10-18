@@ -324,7 +324,7 @@ button.disabled{
         bottom: 30%;
     }
 
-    .heading-five.text-gray{
+    .heading-five.text-gray, .heading-five.text-white{
         font-size: 16px !important;
     }
 
@@ -332,4 +332,23 @@ button.disabled{
         overflow-x: hidden !important;
     }
 
+    div.work-one {
+        filter: grayscale(0);
+        opacity: 1;
+        background-size: 100%;
+        background-position: bottom;
+
+        .big-display{
+            font-size: 39.06px !important;
+        }
+
+        .heading-five{
+            font-size: 16px !important;
+            font-weight: 500 !important;
+        }
+
+        .slice-link{
+            opacity: 1;
+        }
+    }
 }
