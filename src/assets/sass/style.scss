@@ -338,6 +338,9 @@ button.disabled{
         background-size: 100%;
         background-position: bottom;
 
+        :hover{
+            background-size: 100%;
+        }
         .big-display{
             font-size: 39.06px !important;
         }
