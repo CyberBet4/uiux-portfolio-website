@@ -308,9 +308,6 @@ button.disabled {
     background-size: 100%;
     background-position: bottom;
   }
-  div.work-one :hover {
-    background-size: 100%;
-  }
   div.work-one .big-display {
     font-size: 39.06px !important;
   }
@@ -320,6 +317,10 @@ button.disabled {
   }
   div.work-one .slice-link {
     opacity: 1;
+  }
+
+  div.work-one:hover {
+    background-size: 120%;
   }
 }
 
