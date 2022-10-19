@@ -19,6 +19,7 @@ body {
 
 :root {
   --red-color: #ED1C24;
+  --red-light-color: #f53d43;
   --black-color: #000;
   --yellow-color: #F1D302;
   --blue-color: #235789;
@@ -129,6 +130,10 @@ body {
 .btn-red {
   background-color: var(--red-color);
   color: #ffffff;
+}
+
+.btn-red:hover {
+  background-color: var(--red-light-color);
 }
 
 .text-gray {
