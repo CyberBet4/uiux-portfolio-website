@@ -99,7 +99,7 @@ body{
     border-bottom: 1px solid #333;
 }
 
-.work-one{
+.work-one, .work-two{
     background-image: url('../../assets/img/spline.png');
     background-size: 70%;
     background-position: right;
@@ -109,22 +109,25 @@ body{
     transition: all 400ms ease-in-out !important;
     opacity: .5;
 
-    .slice-link{
+    .work-link{
         opacity: 0;
         transition: all 400ms ease-in-out !important;
     }
 }
 
+.work-two{
+    background-color: #001E38;
+}
 
 
 
-.work-one:hover{
+.work-one:hover, .work-two:hover{
     background-size: 60%;
     scale: 1.01;
     opacity: 1;
     filter: grayscale(0);
 
-    .slice-link{
+    .work-link{
         opacity: 1;
     }
 }
@@ -337,7 +340,7 @@ button.disabled{
         overflow-x: hidden !important;
     }
 
-    div.work-one {
+    div.work-one, div.work-two {
         filter: grayscale(0);
         opacity: 1;
         background-size: 100%;
@@ -352,12 +355,12 @@ button.disabled{
             font-weight: 500 !important;
         }
 
-        .slice-link{
+        .work-link{
             opacity: 1;
         }
     }
 
-    div.work-one:hover{
+    div.work-one:hover, div.work-two:hover{
         background-size: 120%;
     }
 }

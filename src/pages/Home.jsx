@@ -31,15 +31,6 @@ const Home = () => {
     };
 
 
-    // const runLoader = (e) => {
-    //     e.preventDefault();
-    //     setLoading(true);
-    //     setTimeout(() => {
-    //         setLoading(false);
-    //     }, 3000);
-    // }
-
-
   return (
     <div className=' dark:text-white dark:bg-black overflow-hidden'>
         <div className="p-4 grid grid-flow-col ">
@@ -185,12 +176,12 @@ const Home = () => {
             Selected <br /> works
         </h1>
 
+        
         {/* work 1 */}
         
-
         <a href="https://www.behance.net/gallery/153025691/Slice-Case-Study" target="_blank" rel="noreferrer">
         <div data-aos="zoom-out-up" data-aos-duration="500" >
-            <div className="flex flex-wrap justify-between items-center p-10 md:p-20 rounded-3xl work-one">
+            <div className="flex flex-wrap justify-between items-center p-10 md:p-20 rounded-3xl work-one mb-10 md:mb-20"  >
                 <div className='mb-10 md:mb-0'>
                     <h1 className="big-display bold">SLICE</h1>
                     
@@ -203,13 +194,40 @@ const Home = () => {
                 <div className='space-y-4'>
 
                 <h3 className="heading-three bold uppercase">September 2022</h3>
-                    <h5 className="heading-five slice-link md:text-right text-black">
+                    <h5 className="heading-five work-link md:text-right text-black">
                         View Project
                         <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
                     </h5>
                 </div>
                 
 
+            </div>
+        </div>
+        </a>
+
+        {/* work 2 */}
+        
+        <a href="https://www.behance.net/gallery/149168327/KribFix-App-Case-Study" target="_blank" rel="noreferrer" className='mt-40'>
+        <div data-aos="zoom-out-up" data-aos-duration="500" >
+            <div className="flex flex-wrap justify-between items-center p-10 md:p-20 rounded-3xl work-two">
+                <div className='mb-10 md:mb-0'>
+                    <h1 className="big-display bold">KRIBFIX</h1>
+                    
+                        <h5 className="heading-five text-white md:max-w-screen-md">
+                        A service app that allows users to send complaint requests to the admin (Krib Nigeria) 
+                        </h5>
+                    
+                </div>
+                
+                <div className='space-y-4'>
+
+                <h3 className="heading-three bold uppercase">July 2022</h3>
+                    <h5 className="heading-five work-link md:text-right text-black">
+                        View Project
+                        <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
+                    </h5>
+                </div>
+                
             </div>
         </div>
         </a>

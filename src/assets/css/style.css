@@ -94,7 +94,7 @@ body {
   border-bottom: 1px solid #333;
 }
 
-.work-one {
+.work-one, .work-two {
   background-image: url("../../assets/img/spline.png");
   background-size: 70%;
   background-position: right;
@@ -104,18 +104,22 @@ body {
   transition: all 400ms ease-in-out !important;
   opacity: 0.5;
 }
-.work-one .slice-link {
+.work-one .work-link, .work-two .work-link {
   opacity: 0;
   transition: all 400ms ease-in-out !important;
 }
 
-.work-one:hover {
+.work-two {
+  background-color: #001E38;
+}
+
+.work-one:hover, .work-two:hover {
   background-size: 60%;
   scale: 1.01;
   opacity: 1;
   filter: grayscale(0);
 }
-.work-one:hover .slice-link {
+.work-one:hover .work-link, .work-two:hover .work-link {
   opacity: 1;
 }
 
@@ -307,24 +311,24 @@ button.disabled {
     overflow-x: hidden !important;
   }
 
-  div.work-one {
+  div.work-one, div.work-two {
     filter: grayscale(0);
     opacity: 1;
     background-size: 100%;
     background-position: bottom;
   }
-  div.work-one .big-display {
+  div.work-one .big-display, div.work-two .big-display {
     font-size: 39.06px !important;
   }
-  div.work-one .heading-five {
+  div.work-one .heading-five, div.work-two .heading-five {
     font-size: 16px !important;
     font-weight: 500 !important;
   }
-  div.work-one .slice-link {
+  div.work-one .work-link, div.work-two .work-link {
     opacity: 1;
   }
 
-  div.work-one:hover {
+  div.work-one:hover, div.work-two:hover {
     background-size: 120%;
   }
 }
