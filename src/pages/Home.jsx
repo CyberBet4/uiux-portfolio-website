@@ -214,7 +214,7 @@ const Home = () => {
                     <h1 className="big-display bold">KRIBFIX</h1>
                     
                         <h5 className="heading-five text-white md:max-w-screen-md">
-                        A service app that allows users to send complaint requests to the admin (Krib Nigeria) 
+                        A service app that allows residents to make complaint requests
                         </h5>
                     
                 </div>
