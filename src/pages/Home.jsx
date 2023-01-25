@@ -3,8 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faArrowTrendUp, faCircleNotch, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Marquee from "react-fast-marquee";
 import emailjs from '@emailjs/browser';
-import triumph from '../assets/img/chibuzo_pic.jpeg'
-
+import triumph from '../assets/img/chibuzo_pic.jpeg';
+import Work from '../components/Work';
+import Slice from '../assets/img/works/slice_artwork.jpg';
+import Lumigrow from '../assets/img/works/lumigrow.jpg';
+import Kasuwa from '../assets/img/works/kasuwa.jpg';
+import Kribfix from '../assets/img/works/kribfix.jpg';
+import Twenty01 from '../assets/img/works/2901.jpg';
 
 const Home = () => {
 
@@ -14,6 +19,7 @@ const Home = () => {
 
     const form = useRef();
 
+    // console.log(typeof(Slice))
     const sendEmail = async (e) => {
         e.preventDefault();
 
@@ -176,61 +182,52 @@ const Home = () => {
             Selected <br /> works
         </h1>
 
-        
-        {/* work 1 */}
-        
-        <a href="https://www.behance.net/gallery/153025691/Slice-Case-Study" target="_blank" rel="noreferrer">
-        <div data-aos="zoom-out-up" data-aos-duration="500" >
-            <div className="flex flex-wrap justify-between items-center p-10 md:p-20 rounded-3xl work-one mb-10 md:mb-20"  >
-                <div className='mb-10 md:mb-0'>
-                    <h1 className="big-display bold">SLICE</h1>
-                    
-                        <h5 className="heading-five text-white">
-                        An app that helps users make better financial decisions
-                        </h5>
-                    
-                </div>
+        {/* Works */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 
-                <div className='space-y-4'>
+                {/* Slice */}
+                <Work 
+                    title={"slice"} desc="An app that helps users make better financial decision" 
+                    link="https://www.behance.net/gallery/153025691/Slice-Case-Study" videolink="#" width="col-6" 
+                    image={Slice}
+                />
 
-                <h3 className="heading-three bold uppercase">September 2022</h3>
-                    <h5 className="heading-five work-link md:text-right text-black">
-                        View Project
-                        <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
-                    </h5>
-                </div>
-                
-
+                {/* Lumigrow */}
+                <Work 
+                    title={"Lumigrow"} desc="Liquor Store Mobile App" 
+                    link="#" videolink="#" width="col-6" 
+                    image={Lumigrow}
+                />
             </div>
-        </div>
-        </a>
 
-        {/* work 2 */}
-        
-        <a href="https://www.behance.net/gallery/149168327/KribFix-App-Case-Study" target="_blank" rel="noreferrer" className='mt-40'>
-        <div data-aos="zoom-out-up" data-aos-duration="500" >
-            <div className="flex flex-wrap justify-between items-center p-10 md:p-20 rounded-3xl work-two">
-                <div className='mb-10 md:mb-0'>
-                    <h1 className="big-display bold">KRIBFIX</h1>
-                    
-                        <h5 className="heading-five text-white md:max-w-screen-md">
-                        A service app that allows residents to make complaint requests
-                        </h5>
-                    
-                </div>
-                
-                <div className='space-y-4'>
-
-                <h3 className="heading-three bold uppercase">July 2022</h3>
-                    <h5 className="heading-five work-link md:text-right text-black">
-                        View Project
-                        <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
-                    </h5>
-                </div>
-                
+            {/* Kasuwa */}
+            <div className="grid grid-cols-1 mt-3 mb-3">
+            <Work 
+                    title={"Kasuwa"} desc="Landing Page" 
+                    link="#" videolink="#" width="col-1"
+                    image={Kasuwa}
+                />
             </div>
-        </div>
-        </a>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+                
+                {/* Kribfix */}
+                <Work 
+                    title={"kribfix"} desc="A service app that enables residents to make complaint request" 
+                    link="https://www.behance.net/gallery/149168327/KribFix-App-Case-Study" videolink="#" width="col-6" 
+                    image={Kribfix}
+                />
+
+                {/* 2901 */}
+                <Work 
+                    title={"29:01"} desc="Food Delivery App" 
+                    link="#" videolink="#" width="col-6" 
+                    image={Twenty01}
+                />
+            </div>
+        {/* Works End Here! */}
+
+
     </div>
 
     {/* Send a Message */}
