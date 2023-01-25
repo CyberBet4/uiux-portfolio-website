@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Artwork from '../assets/img/works/slice_artwork.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLink, faPlayCircle, faCirclePlay } from '@fortawesome/free-solid-svg-icons'
+import { faExternalLink, faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 
 const Work = ({ title, desc, link, videolink, width, image }) => {
 
