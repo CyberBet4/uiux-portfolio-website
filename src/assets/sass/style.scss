@@ -108,6 +108,27 @@ a.overlay-link:hover{
     background-color: #2B2B2B;
 }
 
+div.video-overlay{
+    background-color: rgba(0, 0, 0, 0.950);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        color: #fff;
+        z-index: inherit;
+    }
+
+
+}
+
+div.video-overlay.hidden{
+    display: none !important;
+}
 
 // END OF OVERLAY PART
 
