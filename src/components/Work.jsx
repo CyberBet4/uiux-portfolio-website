@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import Artwork from '../assets/img/works/slice_artwork.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLink, faCirclePlay } from '@fortawesome/free-solid-svg-icons'
-import Prototype from './modal/Prototype'
+import { toggleOverlay } from '../redux/overlay'
+import { useDispatch } from "react-redux";
 
 const Work = ({ title, desc, link, videolink, width, image }) => {
 
   const [overlay, setoverlay] = useState(false);
   const [overlayDisplay, setoverlayDisplay] = useState("work-overlay hidden flex justify-center")
+
+  const dispatch = useDispatch(); //dispatch is used to call a function from a state manager (React Redux Toolkit)
 
   useEffect(()=>{
     if(overlay){
@@ -50,12 +52,14 @@ const Work = ({ title, desc, link, videolink, width, image }) => {
                 <></>
               }
                 
-              {
+                {
                 videolink != "#" && videolink != "" ?
-                <a href={videolink} className="text-center overlay-link">
+                <button 
+                  onClick={() => dispatch(toggleOverlay(videolink))} // trigger the toggle function in the state manager
+                  className="text-center overlay-link">
                     <FontAwesomeIcon icon={faCirclePlay} style={{color : '#fff'}} />
                     <p>Watch Prototype</p>
-                </a> :
+                </button> :
                 <></>
               }
             </div>
@@ -92,10 +96,12 @@ const Work = ({ title, desc, link, videolink, width, image }) => {
                 
               {
                 videolink != "#" && videolink != "" ?
-                <a href={videolink} className="text-center overlay-link">
+                <button  
+                  onClick={() => dispatch(toggleOverlay(videolink))} // trigger the toggle function in the state manager
+                  className="text-center overlay-link">
                     <FontAwesomeIcon icon={faCirclePlay} style={{color : '#fff'}} />
                     <p>Watch Prototype</p>
-                </a> :
+                </button> :
                 <></>
               }
             </div>
@@ -104,10 +110,9 @@ const Work = ({ title, desc, link, videolink, width, image }) => {
 }
 
       <img src={image} alt="" 
-      onMouseEnter={()=>setoverlay(true)} 
-      onClick={()=>setoverlay(true)} 
-      
-      className='imagework'  />
+        onMouseEnter={()=>setoverlay(true)} 
+        onClick={()=>setoverlay(true)} 
+        className='imagework'  />
       
     </div>
   )

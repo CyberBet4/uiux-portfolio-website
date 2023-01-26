@@ -10,14 +10,13 @@ import Lumigrow from '../assets/img/works/lumigrow.jpg';
 import Kasuwa from '../assets/img/works/kasuwa.jpg';
 import Kribfix from '../assets/img/works/kribfix.jpg';
 import Twenty01 from '../assets/img/works/2901.jpg';
-import Prototype from '../components/modal/Prototype';
 
 const Home = () => {
 
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
-
+    
     const form = useRef();
 
     // console.log(typeof(Slice))
@@ -40,7 +39,6 @@ const Home = () => {
 
   return (
     <div className=' dark:text-white dark:bg-black overflow-hidden'>
-        
         <div className="p-4 grid grid-flow-col ">
             
             {/* Intro */}
@@ -190,14 +188,16 @@ const Home = () => {
                 {/* Slice */}
                 <Work 
                     title={"slice"} desc="An app that helps users make better financial decision" 
-                    link="https://www.behance.net/gallery/153025691/Slice-Case-Study" videolink="#" width="col-6" 
+                    link="https://www.behance.net/gallery/153025691/Slice-Case-Study" 
+                    videolink="#" 
+                    width="col-6" 
                     image={Slice}
                 />
 
                 {/* Lumigrow */}
                 <Work 
                     title={"Lumigrow"} desc="Liquor Store Mobile App" 
-                    link="#" videolink="https://drive.google.com/file/d/1Wb3KbIuGpM6Sz77qd4PV7ddTePdZQ5uZ/view?usp=share_link" width="col-6" 
+                    link="#" videolink="https://www.youtube.com/embed/kFf56zf1Yls" width="col-6" 
                     image={Lumigrow}
                 />
             </div>
@@ -216,7 +216,7 @@ const Home = () => {
                 {/* Kribfix */}
                 <Work 
                     title={"kribfix"} desc="A service app that enables residents to make complaint request" 
-                    link="https://www.behance.net/gallery/149168327/KribFix-App-Case-Study" videolink="https://drive.google.com/file/d/1ksfywVGnY1npXsiHzxMydnnZozUgT29O/view?usp=share_link" width="col-6" 
+                    link="https://www.behance.net/gallery/149168327/KribFix-App-Case-Study" videolink="https://www.youtube.com/embed/BvcM-uyTgAo" width="col-6" 
                     image={Kribfix}
                 />
 

@@ -6,6 +6,7 @@ import Footer from  './layouts/Footer' ;
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Prototype from './components/modal/Prototype';
+import { useSelector } from "react-redux";
 // import ReactGA from 'react-ga';
 
 // ReactGA.initialize('G-88BWY6T3X9');
@@ -14,9 +15,15 @@ import Prototype from './components/modal/Prototype';
 AOS.init();
 
 function App() {
+
+  const { link } = useSelector((state) => state.overlay);
+  const { display } = useSelector((state) => state.overlay);
+  console.log(link);
   return (
     <>
-      <Prototype show={false} />
+      <Prototype show={display} // toggles video overlay for prototype
+      src={link} 
+      />
       <Header />
       <Home />
       <Footer />
