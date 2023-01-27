@@ -206,7 +206,7 @@ const Home = () => {
             <div className="grid grid-cols-1 mt-3 mb-3">
             <Work 
                     title={"Kasuwa"} desc="Landing Page" 
-                    link="#" videolink="#" width="col-1"
+                    link="#" videolink="https://www.youtube.com/embed/ZKW4jfz6f-I" width="col-1"
                     image={Kasuwa}
                 />
             </div>
